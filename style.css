@@ -243,3 +243,57 @@ body {
              .btn:hover {
                background-color: #a67433;
              }
+
+             /* Section Tentang Kami */
+.tentang-kami {
+               background-color: #000; /* hitam pekat */
+               color: #fff;
+               padding: 80px 0;
+             }
+
+             .tentang-kami .container {
+               max-width: 1200px;
+               margin: 0 auto;
+               padding: 0 20px;
+             }
+
+             .judul-section {
+               text-align: center;
+               font-size: 36px;
+               margin-bottom: 40px;
+             }
+
+             .judul-section span {
+               color: #c49b63;
+             }
+
+             .content {
+               display: flex;
+               flex-wrap: wrap;
+               gap: 40px;
+               align-items: center;
+               justify-content: center;
+             }
+
+             .image img {
+               width: 500px;
+               max-width: 100%;
+               border-radius: 10px;
+             }
+
+             .text {
+               flex: 1;
+               min-width: 300px;
+             }
+
+             .text h3 {
+               font-size: 24px;
+               margin-bottom: 20px;
+             }
+
+             .text p {
+               font-size: 16px;
+               line-height: 1.6;
+               margin-bottom: 15px;
+               color: #ccc;
+             }
