@@ -80,3 +80,39 @@ body {
 .navbar .navbar-extra a:hover {
   color: var(--primary);
 }
+
+hamburger-menu {Add commentMore actions
+    display: none;
+}
+
+/* Media Queris */
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+
+  #hamburger-menu{
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    display
+  }
+}
+
+/* Mobile Phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
