@@ -158,3 +158,88 @@ body {
     font-size: 55%;
   }
 }
+* hero section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("img/kopi.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(1, 1, 3, 1) 8%,
+    rgba(255, 255, 255, 0) 50%
+  );
+}
+
+/* Hero Section */
+             .hero {
+               background-image: url('img/kopi.jpg');
+               background-size: cover;
+               background-position: center;
+               height: 100vh;
+               display: flex;
+               align-items: center;
+               padding-left: 2rem;
+               color: white;
+               position: relative;
+               padding-top: 100px; /* sesuaikan dengan tinggi navbar */
+
+             }
+
+             .hero::before {
+               content: "";
+               position: absolute;
+               top: 0; left: 0;
+               width: 100%; height: 100%;
+               background-color: rgba(0, 0, 0, 0.6);
+               z-index: 1;
+             }
+
+             .hero-content {
+               position: relative;
+               z-index: 2;
+               max-width: 600px;
+             }
+
+             .hero h1 {
+               font-size: 3rem;
+               line-height: 1.2;
+               margin-bottom: 1rem;
+             }
+
+             .hero .highlight {
+               color: #c28f4d;
+             }
+
+             .hero p {
+               margin-bottom: 1.5rem;
+               font-size: 1.1rem;
+               color: #ccc;
+             }
+
+             .btn {
+               background-color: #c28f4d;
+               color: white;
+               padding: 0.75rem 1.5rem;
+               text-decoration: none;
+               border-radius: 5px;
+               font-weight: bold;
+               transition: background 0.3s;
+             }
+
+             .btn:hover {
+               background-color: #a67433;
+             }
