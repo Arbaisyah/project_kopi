@@ -297,3 +297,111 @@ body {
                margin-bottom: 15px;
                color: #ccc;
              }
+
+              /* SECTION MENU */
+.menu {
+               background-color: #000; /* hitam pekat */
+               color: #fff;
+               padding: 80px 0;
+               text-align: center;
+             }
+
+             .menu .container {
+               max-width: 1200px;
+               margin: 0 auto;
+               padding: 0 20px;
+             }
+
+             .menu .judul-section {
+               font-size: 36px;
+               margin-bottom: 10px;
+               font-weight: bold;
+             }
+
+             .menu .judul-section span {
+               color: #c49b63; /* warna emas */
+             }
+
+             .menu .deskripsi-menu {
+               font-size: 16px;
+               color: #ccc;
+               margin-bottom: 50px;
+               max-width: 700px;
+               margin-left: auto;
+               margin-right: auto;
+               line-height: 1.6;
+             }
+
+             .menu-list {
+               display: grid;
+               grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+               gap: 40px;
+               justify-items: center;
+             }
+
+             .menu-item {
+               text-align: center;
+             }
+
+             .menu-item img {
+               width: 150px;
+               height: 150px;
+               object-fit: cover;
+               border-radius: 50%;
+               box-shadow: 0 0 15px rgba(0,0,0,0.6);
+               margin-bottom: 15px;
+               transition: transform 0.3s ease;
+             }
+
+             .menu-item img:hover {
+               transform: scale(1.05);
+             }
+
+             .menu-item h3 {
+               font-size: 18px;
+               margin-bottom: 5px;
+               color: #fff;
+             }
+
+             .menu-item p {
+               color: #c49b63;
+               font-weight: bold;
+               font-size: 15px;
+             }
+             .menu-list {
+               display: grid;
+               grid-template-columns: repeat(4, 1fr); /* Baris pertama 4 item */
+               gap: 40px;
+               justify-items: center;
+               flex-wrap: wrap;
+             }
+
+             .menu-item {
+               text-align: center;
+
+             }
+             @media screen and (max-width: 768px) {
+               .menu-list {
+                 grid-template-columns: repeat(2, 1fr); /* Tablet: 2 kolom */
+               }
+
+               .menu-item:nth-child(5),
+               .menu-item:nth-child(6) {
+                 grid-column: auto; /* Normal kembali di layar kecil */
+               }
+             }
+
+             @media screen and (max-width: 480px) {
+               .menu-list {
+                 grid-template-columns: 1fr; /* Mobile: 1 kolom */
+               }
+             }
+
+
+             .menu-item:nth-child(5) {
+               grid-column: 2 / 3;
+             }
+
+             .menu-item:nth-child(6) {
+               grid-column: 3 / 4;
+             }
