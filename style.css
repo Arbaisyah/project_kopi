@@ -261,7 +261,9 @@ body {
  padding-top: 0;
 }
 
-
+.modal-content {
+ flex-wrap: wrap;
+}
 
 }
 
@@ -279,7 +281,9 @@ body {
   background-size: cover;
   background-position: center;
   height: 100vh;
-  display: flex;
+  display: flex;.modal-content {
+ flex-wrap: wrap;
+}
   align-items: center;
   justify-content:flex-start ;
   color: white;
