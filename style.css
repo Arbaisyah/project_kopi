@@ -261,13 +261,17 @@ body {
  padding-top: 0;
 }
 
-.modal-content {
- flex-wrap: wrap;
+
+
 }
 
+/* Mobile Phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+
 }
-
-
 
 /* hero section */
 .hero {
