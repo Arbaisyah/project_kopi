@@ -36,7 +36,7 @@
 
       <div class="navbar-extra">
         <a href="#" id="search-button"><i data-feather="search"></i></a>
-        <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
+        <a href="#" id="shopping-cart-button"><i data-feather="shopping-cart"></i></a>
         <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
       </div>
 
@@ -46,6 +46,38 @@
                <label for="search-box"><i data-feather="search"></i></label>
        </div>
        <!-- search form end -->
+
+      <!-- shoping card start -->
+       <div class="shopping-cart">
+        <div class="cart-item">
+               <img src="img/bijikopi1.jpg" alt="produk1">
+               <div class="item-detail">
+                <h3>Product 1</h3>
+                <div class="item-price">IDR 30K</div>
+               </div>
+               <i data-feather="trash-2" class="remove-item"></i>
+        </div>
+
+         <div class="cart-item">
+               <img src="img/bijikopi2.jpg" alt="produk1">
+               <div class="item-detail">
+                <h3>Product 1</h3>
+                <div class="item-price">IDR 30K</div>
+               </div>
+               <i data-feather="trash-2" class="remove-item"></i>
+        </div>
+
+         <div class="cart-item">
+               <img src="img/bijikopi2.jpg" alt="produk1">
+               <div class="item-detail">
+                <h3>Product 1</h3>
+                <div class="item-price">IDR 30K</div>
+               </div>
+               <i data-feather="trash-2" class="remove-item"></i>
+        </div>
+
+       </div>
+       <!-- shoping card end -->
     </nav>
 
     <!-- Navbar end -->
@@ -133,12 +165,12 @@
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium eos aliquid voluptate ipsam fugit incidunt.</p>
   </div>
 
-  <!--  Satu saja .row -->
+
   <div class="row">
     <div class="products-card">
       <div class="product-icons">
         <a href="#"><i data-feather="shopping-cart"></i></a>
-        <a href="#"><i data-feather="eye"></i></a>
+        <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
       </div>
       <div class="product-image">
         <img src="img/bijikopi1.jpg" alt="produk 1">
@@ -160,7 +192,7 @@
     <div class="products-card">
       <div class="product-icons">
         <a href="#"><i data-feather="shopping-cart"></i></a>
-        <a href="#"><i data-feather="eye"></i></a>
+        <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
       </div>
       <div class="product-image">
         <img src="img/bijikopi2.jpg" alt="produk 1">
@@ -182,7 +214,7 @@
     <div class="products-card">
       <div class="product-icons">
         <a href="#"><i data-feather="shopping-cart"></i></a>
-        <a href="#"><i data-feather="eye"></i></a>
+        <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
       </div>
       <div class="product-image">
         <img src="img/kopibubuk.jpg" alt="produk 1">
@@ -260,6 +292,8 @@
                  Created by <span>Siti Arbaisyah</span> | 2025
                </div>
              </footer>
+
+
 
      <!-- Feather Icons -->
     <script>
