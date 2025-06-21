@@ -286,6 +286,10 @@ body {
   align-items: center;
   justify-content: flex-start;
   position: relative;
+  /* Efek masking hitam untuk memberi gradasi visual saat scroll */
+ /* Terlihat lebih jelas ketika halaman digulir ke bawah */
+  -webkit-mask-image: linear-gradient(rgba(0,0,0,1)85%,rgba(0,0,0,0)) ;
+  mask-image: linear-gradient(rgba(0,0,0,1)85%,rgba(0,0,0,0)) ;
 
 }
 
