@@ -275,6 +275,22 @@ body {
 
 }
 
+/*
+  ✨ Perbedaan mask vs clip-path ✨
+
+  ✅ mask-image:
+  - Bisa pakai gambar (SVG, PNG, JPG)
+  - Warna putih = terlihat, hitam = transparan
+  - Lebih fleksibel, bisa buat efek kompleks
+
+  ✅ clip-path:
+  - Hanya bentuk vektor (circle, polygon, dll)
+  - Tidak bisa pakai gambar
+  - Lebih ringan, tapi terbatas bentuk
+
+  👉 mask cocok untuk efek artistik, clip-path cocok untuk bentuk sederhana
+*/
+
 /* hero section */
 .hero {
   background-image: url('img/bg.jpg');
