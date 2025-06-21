@@ -277,19 +277,17 @@ body {
 
 /* hero section */
 .hero {
-  background-image: url('img/kopi1.jpg');
+  background-image: url('img/bg.jpg');
   background-size: cover;
   background-position: center;
   height: 100vh;
-  display: flex;.modal-content {
- flex-wrap: wrap;
-}
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content:flex-start ;
-  color: white;
+  justify-content: flex-start;
   position: relative;
-  padding-left: 5rem;
-  padding-top: 100px;
+  -webkit-mask-image: linear-gradient(rgba(0,0,0,1)85%,rgba(0,0,0,0)) ;
+  mask-image: linear-gradient(rgba(0,0,0,1)85%,rgba(0,0,0,0)) ;
 }
 
 .hero::before {
@@ -302,20 +300,26 @@ body {
 }
 
 .hero-content {
-  position: relative;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 2;
-  max-width: 600px;
-  padding: 0 1rem;
-  margin-left: 2rem;
-  text-align: left;
+  text-align: center;
+  max-width: 1000px;
+  top: 30%;
 }
 
 
 .hero h1 {
-  font-size: 6rem;
+  font-size: 5.5rem; /* sebelumnya 6rem */
   line-height: 1.2;
   margin-bottom: 1rem;
+  white-space: nowrap; /* paksa satu baris */
+  overflow: hidden;
+  text-overflow: ellipsis; /* biar rapi kalau pun kepanjangan */
 }
+
 
 .hero .highlight {
   color: #c28f4d;
@@ -327,16 +331,15 @@ body {
   color: #ccc;
 }
 
-.btn {
-  background-color: #c28f4d;
-  color: white;
-  padding: 1.5rem 2.5rem;
-  font-size: 1.5rem;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: bold;
-  transition: background 0.3s;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+  z-index: 2;
 }
+
+
 
 .btn:hover {
   background-color: #a67433;
@@ -375,7 +378,7 @@ body {
              }
 
              .image img {
-               width: 500px;
+               width: 100%;
                max-width: 100%;
                border-radius: 10px;
              }
@@ -603,14 +606,6 @@ border: 1px solid var(--primary);
  font-weight: lighter;
  font-size: 1rem;
 }
-
-
-
-
-
-
-
-
 
 
             .kontak {
