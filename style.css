@@ -367,6 +367,17 @@ body {
   z-index: 2;
 }
 
+.hero .mask-container {
+ position: absolute;
+ /* background: salmon; */
+ inset: 0;
+ /* Eksperimen Masking Custom: */
+ -webkit-mask-image: url(img/svgkopi.svg);
+ -webkit-mask-repeat: no-repeat;
+ -webkit-mask-size: cover;
+ -webkit-mask-position: center;
+
+}
 
 
 .btn:hover {
