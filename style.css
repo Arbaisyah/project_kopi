@@ -302,14 +302,17 @@ body {
   align-items: center;
   justify-content: flex-start;
   position: relative;
-  /* Efek masking hitam untuk memberi gradasi visual saat scroll */
- /* Terlihat lebih jelas ketika halaman digulir ke bawah */
+ /*  Efek masking hitam untuk memberi gradasi visual pada bagian bawah hero */
+/* Teknik ini menciptakan transisi halus antara section hero dan section berikutnya */
+/* Bagian atas tetap terlihat jelas, bagian bawah perlahan menghilang (transparan) */
+/* Cocok digunakan saat ingin efek scroll yang smooth dan modern */
   -webkit-mask-image: linear-gradient(rgba(0,0,0,1)85%,rgba(0,0,0,0)) ;
   mask-image: linear-gradient(rgba(0,0,0,1)85%,rgba(0,0,0,0)) ;
 
 }
 
 /* Container untuk efek masking */
+/* Container utama untuk center layout */
 .mask-container {
   width: 100%;
   height: 100%;
@@ -383,7 +386,6 @@ body {
 .btn:hover {
   background-color: #a67433;
 }
-
 
              /* Section Tentang Kami */
               .tentang-kami {
