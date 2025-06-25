@@ -7,19 +7,30 @@ document.addEventListener('alpine:init', () => {
       { id: 3, name: 'Primo Passo', img: '3.jpg', price: 30000 },
       { id: 4, name: 'Aceh Gayo', img: '4.jpg', price: 35000 },
       { id: 5, name: 'Sumatra Mandheling', img: '5.jpg', price: 40000 },
-     
     ],
+    
     rupiah(value) {
-  return new Intl.NumberFormat('id-ID', {
-    style: 'currency',
-    currency: 'IDR',
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 0
-  }).format(value);
-}
-
+      return new Intl.NumberFormat('id-ID', {
+        style: 'currency',
+        currency: 'IDR',
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 0
+      }).format(value);
+    }
   }));
-  
 
-  
+  // ✅ Perbaikan: store cart didefinisikan di dalam event alpine:init
+  Alpine.store('cart', {
+    items: [],
+    total: 0,
+    quantity: 0,
+    add(newItem) {
+      this.items.push(newItem);
+      this.quantity++;
+      this.total += newItem.price;
+      console.log(this.total);
+    },
+  });
 });
+
+

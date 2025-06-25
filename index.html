@@ -42,7 +42,10 @@
 
       <div class="navbar-extra">
         <a href="#" id="search-button"><i data-feather="search"></i></a>
-        <a href="#" id="shopping-cart-button"><i data-feather="shopping-cart"></i></a>
+        <a href="#" id="shopping-cart-button">
+          <i data-feather="shopping-cart"></i>
+           <span class="quantity-badge">10</span>
+        </a>
         <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
       </div>
 
@@ -174,7 +177,7 @@
     <template x-for="(item, index) in items" x-key ="index">
     <div class="products-card">
       <div class="product-icons">
-        <a href="#">
+        <a href="#" @click.prevent="$store.cart.add(item)">
           <svg
   width="24"
   height="24"
@@ -249,18 +252,15 @@
   fill="currentColor"
   stroke="currentColor"
   stroke-width="2"
-  stroke-linecap="round"
+  stroke-linecap="round"svg
   stroke-linejoin="round"
 >
-  <use href="img/feather-sprite.svg#star" />
+  <use href="img/feather-sprite.#star" />
 </svg>
 
       
         </div>
-       <div class="product-price">
-  <span x-text="rupiah(item.price)"></span>
-</div>
-
+       <div class="product-price"><span x-text="rupiah (item.price)"></span></div>
       </div>
     </div>
     </template>
