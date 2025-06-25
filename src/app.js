@@ -33,27 +33,23 @@ document.addEventListener('alpine:init', () => {
     },
 
     remove(id) {
-      // ambil item yg mau di remove berdasarkan id nya
       const cartItem = this.items.find((item) => item.id === id);
-
       if (!cartItem) return;
 
-      // jika item lebih dari satu
       if (cartItem.quantity > 1) {
-        // telusuri dan kurangi quantity
+        // Kurangi quantity & total per item
         this.items = this.items.map((item) => {
-          if (item.id !== id) {
-            return item;
-          } else {
+          if (item.id === id) {
             item.quantity--;
             item.total = item.price * item.quantity;
-            this.quantity--;
-            this.total -= item.price;
-            return item;
           }
+          return item;
         });
+        this.quantity--;
+        this.total -= cartItem.price;
+
       } else {
-        // jika item hanya satu, hapus dari cart
+        // Jika tinggal 1, hapus item sepenuhnya
         this.items = this.items.filter((item) => item.id !== id);
         this.quantity--;
         this.total -= cartItem.price;
