@@ -302,7 +302,7 @@ body {
   align-items: center;
   justify-content: flex-start;
   position: relative;
- /*  Efek masking hitam untuk memberi gradasi visual pada bagian bawah hero */
+/*  Efek masking hitam untuk memberi gradasi visual pada bagian bawah hero */
 /* Teknik ini menciptakan transisi halus antara section hero dan section berikutnya */
 /* Bagian atas tetap terlihat jelas, bagian bawah perlahan menghilang (transparan) */
 /* Cocok digunakan saat ingin efek scroll yang smooth dan modern */
@@ -373,12 +373,14 @@ body {
 .hero .mask-container {
  position: absolute;
  /* background: salmon; */
- inset: 0;
- /* Eksperimen Masking Custom: */
- -webkit-mask-image: url(img/svgkopi.svg);
- -webkit-mask-repeat: no-repeat;
- -webkit-mask-size: cover;
- -webkit-mask-position: center;
+ inset: 0; /* Menjadikan container menutupi seluruh area parent */
+  /* Masking SVG kustom: Menampilkan elemen hanya pada bagian bentuk SVG */
+  /* svgkopi.svg adalah file vektor berisi bentuk khusus (misalnya logo kopi) */
+  /* Cocok untuk efek branding, dekoratif, atau reveal unik berbasis bentuk */
+ -webkit-mask-image: url(img/svgkopi.svg); /* File SVG sebagai bentuk masking */
+ -webkit-mask-repeat: no-repeat;           /* Jangan ulangi bentuk SVG */
+ -webkit-mask-size: cover;                 /* Masking SVG menyesuaikan ukuran kontainer */
+ -webkit-mask-position: center;            /* Posisikan bentuk tepat di tengah */
 
 }
 
