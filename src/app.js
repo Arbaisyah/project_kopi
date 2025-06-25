@@ -19,4 +19,7 @@ document.addEventListener('alpine:init', () => {
 }
 
   }));
+  
+
+  
 });
