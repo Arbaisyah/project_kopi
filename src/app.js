@@ -32,6 +32,34 @@ document.addEventListener('alpine:init', () => {
       this.total += newItem.price;
     },
 
+    remove(id) {
+      // ambil item yg mau di remove berdasarkan id nya
+      const cartItem = this.items.find((item) => item.id === id);
+
+      if (!cartItem) return;
+
+      // jika item lebih dari satu
+      if (cartItem.quantity > 1) {
+        // telusuri dan kurangi quantity
+        this.items = this.items.map((item) => {
+          if (item.id !== id) {
+            return item;
+          } else {
+            item.quantity--;
+            item.total = item.price * item.quantity;
+            this.quantity--;
+            this.total -= item.price;
+            return item;
+          }
+        });
+      } else {
+        // jika item hanya satu, hapus dari cart
+        this.items = this.items.filter((item) => item.id !== id);
+        this.quantity--;
+        this.total -= cartItem.price;
+      }
+    },
+
     rupiah(value) {
       return new Intl.NumberFormat('id-ID', {
         style: 'currency',
