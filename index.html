@@ -13,19 +13,19 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
       rel="stylesheet"
-    />
+    />=
+    <!-- alpines js -->
+      <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+      <!-- App -->
+       <script src="src/app.js"></script>
+
 
     <!-- Feather Icons -->
     <script src="https://unpkg.com/feather-icons"></script>
 
     <!-- My Style -->
     <link rel="stylesheet" href="style.css" />
-
-     <!-- alpines js -->
-      <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-
-     <!-- App -->
-       <script src="src/app.js"></script>
   </head>
   <body>
     <!-- Navbar start -->
@@ -88,17 +88,16 @@
 
     <!-- Navbar end -->
 
- <section class="hero" id="home">
-  <!-- Contoh implementasi CSS Masking.-->
-    <div class="mask-container">  <!--bagian part3  -->
-   <div class="container">
-     <div class="hero-content">
+         <section class="hero" id="home">
+         <div class="mask-container">
+  <div class="container">
+    <div class="hero-content">
       <h1>Mari Nikmati <span>Secangkir <span class="highlight">Kopi</span></span></h1>
       <p>satu cangkir kopi di tempat yang tenang bikin kita merasa dunia ini berhenti sejenak </p>
     </div>
-    </div>
-   </div>
- </section>
+  </div>
+  </div>
+</section>
 
     <section id="about" class="tentang-kami">
                <div class="container">
@@ -106,14 +105,15 @@
                  <div class="content">
                    <div class="image">
                      <img src="img/cappuccino.jpeg" alt="Kopi Kenangan Senja" />
-                 </div>
+                   </div>
                    <div class="text">
                      <h3>Kenapa memilih kopi kami?</h3>
                      <p>Kami menyajikan kopi dengan biji pilihan, diseduh dengan sepenuh hati, untuk memastikan setiap cangkir yang kamu nikmati punya cita rasa yang tak terlupakan.
 
                </p>
-                 <p>Dari biji kopi terbaik nusantara hingga tangan-tangan terampil yang meraciknya, kami hadirkan secangkir ketenangan dalam kesibukan harimu.
-                    </p>
+                     <p>Dari biji kopi terbaik nusantara hingga tangan-tangan terampil yang meraciknya, kami hadirkan secangkir ketenangan dalam kesibukan harimu.
+
+               </p>
 
                <p>Di setiap cangkir Kopi Kenangan Senja, ada cerita yang kami racik: tentang rasa, tentang waktu, dan tentang momen yang ingin kamu ulangi.</p>
                    </div>
@@ -164,77 +164,108 @@
              <!-- menu section end-->
 
   <!-- products section start -->
-  <section class="products" id="products">
+  <section class="products" id="products" x-data="products"> 
   <div class="products-header">
     <h2><span>Produk Unggulan </span>Kami</h2>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium eos aliquid voluptate ipsam fugit incidunt.</p>
   </div>
 
   <div class="row">
+    <template x-for="(item, index) in items" x-key ="index">
     <div class="products-card">
       <div class="product-icons">
-        <a href="#"><i data-feather="shopping-cart"></i></a>
-        <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
-      </div>
-      <div class="product-image">
-        <img src="img/bijikopi1.jpg" alt="produk 1">
-      </div>
-      <div class="product-content">
-        <h3>Coffee Beans 1</h3>
-        <div class="product-start">
-          <i data-feather="star" class="star-full"></i>
-          <i data-feather="star" class="star-full"></i>
-          <i data-feather="star" class="star-full"></i>
-          <i data-feather="star" class="star-full"></i>
-          <i data-feather="star" class="star-full"></i>
-        </div>
-        <div class="product-price">IDR 30K <span>IDR 55K</span></div>
-      </div>
-    </div>
+        <a href="#">
+          <svg
+  width="24"
+  height="24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <use href="img/feather-sprite.svg#shopping-cart" />
+</svg>
 
-    <!-- Produk ke-2 -->
-    <div class="products-card">
-      <div class="product-icons">
-        <a href="#"><i data-feather="shopping-cart"></i></a>
-        <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
+ <a href="#">
+          <svg
+  width="24"
+  height="24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <use href="img/feather-sprite.svg#eye" />
+</svg>
+        
       </div>
       <div class="product-image">
-        <img src="img/bijikopi2.jpg" alt="produk 1">
+      <img :src="'img/products/' + item.img" :alt="item.name">
       </div>
       <div class="product-content">
-        <h3>Coffee Beans 1</h3>
+         <h3 x-text="item.name"></h3>
         <div class="product-start">
-          <i data-feather="star" class="star-full"></i>
-          <i data-feather="star" class="star-full"></i>
-          <i data-feather="star" class="star-full"></i>
-          <i data-feather="star" class="star-full"></i>
-          <i data-feather="star"></i>
-        </div>
-        <div class="product-price">IDR 30K <span>IDR 55K</span></div>
-      </div>
-    </div>
+           <svg
+  width="24"
+  height="24"
+  fill="currentColor"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <use href="img/feather-sprite.svg#star" />
+</svg>
+          <svg
+  width="24"
+  height="24"
+  fill="currentColor"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <use href="img/feather-sprite.svg#star" />
+</svg>
 
-    <!-- Produk ke-3 -->
-    <div class="products-card">
-      <div class="product-icons">
-        <a href="#"><i data-feather="shopping-cart"></i></a>
-        <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
-      </div>
-      <div class="product-image">
-        <img src="img/kopibubuk.jpg" alt="produk 1">
-      </div>
-      <div class="product-content">
-        <h3>Coffee Beans 1</h3>
-        <div class="product-start">
-          <i data-feather="star" class="star-full"></i>
-          <i data-feather="star" class="star-full"></i>
-          <i data-feather="star" class="star-full"></i>
-          <i data-feather="star" ></i>
-          <i data-feather="star"></i>
+          <svg
+  width="24"
+  height="24"
+  fill="currentColor"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <use href="img/feather-sprite.svg#star" />
+</svg>
+
+
+          <svg
+  width="24"
+  height="24"
+  fill="currentColor"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <use href="img/feather-sprite.svg#star" />
+</svg>
+
+      
         </div>
-        <div class="product-price">IDR 30K <span>IDR 55K</span></div>
+       <div class="product-price">
+  <span x-text="rupiah(item.price)"></span>
+</div>
+
       </div>
     </div>
+    </template>
+
+    
 
 
   </div>
